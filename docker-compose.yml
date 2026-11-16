@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  ocr-engine:
+    build: .
+    container_name: logiscan_ocr_dev
+    volumes:
+      - ./src:/app/src
+      - ./tests:/app/tests
+      - ./data:/app/data
+    environment:
+      - PYTHONPATH=/app
